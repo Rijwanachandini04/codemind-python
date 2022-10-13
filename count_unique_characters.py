@@ -1,13 +1,11 @@
-a=input()
-c=co=0
-for i in a:
+n=input()
+n=n.lower()
+s=0
+for i in n:
     c=0
-    if i==" ":
-        continue
-    else:
-        for j in a:
-            if i==j or i==j.upper() or i==j.lower():
-                c+=1
-        if c==1:
-            co+=1
-print(co)
+    for j in n:
+        if i==j and i!=' ':
+            c+=1
+    if c==1:
+        s+=1
+print(s)
