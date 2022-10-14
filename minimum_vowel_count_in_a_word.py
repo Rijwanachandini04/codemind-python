@@ -1,15 +1,12 @@
-a=input()
-arr=list(a.split())
-vow=list("aeiouAEIOU")
-ma=100
-fl=0
-for i in arr:
+s="aeiouAEIOU"
+l=list(map(str,input().split()))
+max=999
+for i in range(len(l)):
     c=0
-    for j in i:
-        if j in vow:
+    for j in l[i]:
+        if j in s:
             c+=1
-            fl=1
-    if ma>c:
-        ma=c
+    if c<max:
+        max=c
+print(max)
 
-print(ma)
