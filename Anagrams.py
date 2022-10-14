@@ -1,16 +1,9 @@
-a=input()
-b=input()
-f=0
-if len(a)==len(b):
-    for i in a:
-        if i in b or i.upper() in b or i.lower() in b:
-            f=1
-        else:
-            f=0
-            break
-    if f==1:
-        print("True")
-    else:
-        print("False")
+n=input()
+n1=input()
+
+n=set(n.lower())
+n1=set(n1.lower())
+if n==n1:
+    print(True)
 else:
-    print("False")
+    print(False)
