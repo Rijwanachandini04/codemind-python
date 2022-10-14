@@ -1,10 +1,8 @@
-a=input()
-arr=list(a.split())
-for i in range(len(arr)):
-    mi=ma=arr[i][0]
-    for j in arr[i]:
-        if ord(j)<ord(mi):
-            mi=j
-        if ord(j)>ord(ma):
-            ma=j
-    print(abs(ord(mi)-ord(ma)),end=" ")
+l=list(map(str,input().split()))
+ll=len(l)
+a=[]
+for i in range(ll):
+    mi=ord(min(l[i]))
+    ma=ord(max(l[i]))
+    a.append(ma-mi)
+print(*a)
