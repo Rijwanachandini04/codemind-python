@@ -1,13 +1,11 @@
-s=input()
-arr="abcdefghijklmnopqrstuvwxyz"
-c=v=0
-for i in arr:
-    if i in s or i.upper() in s:
-        c+=1
-    else:
-        v=1
-        break
-if(v!=1):
+l=input()
+l=l.lower()
+a=[]
+for i in range(len(l)):
+    if l[i]!=' ':
+        a.append(l[i])
+a=set(a)
+if len(a)==26:
     print(True)
 else:
     print(False)
