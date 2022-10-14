@@ -1,26 +1,15 @@
-a=input()
-b=input()
-a1=""
-b1=""
-for i in a:
-    if i.isupper():
-        a1+=i.lower()
-    else:
-        a1+=i
-for i in b:
-    if i.isupper():
-        b1+=i.lower()
-    else:
-        b1+=i
-arr=list(a1.split())
-brr=list(b1.split())
-res=[]
-for i in brr:
-    if i in arr:
-        if i not in res:
-            res.append(i)
-if len(res)==0:
-    print(0)
-else:
-    for i in res:
-        print(i,end=" ")
+l=list(map(str,input().split()))
+ll=[]
+ll1=[]
+for i in l:
+    ll.append(i.lower())
+l1=list(map(str,input().split()))
+for i in l1:
+    ll1.append(i.lower())
+s=[]
+
+for i in ll1:
+    if i in ll:
+        if i not in s:
+            s.append(i)
+print(*s)
