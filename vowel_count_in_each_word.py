@@ -1,9 +1,10 @@
-a=input()
-arr=list(a.split())
-v='aeiouAEIOU'
-for i in arr:
+s="aeiouAEIOU"
+l=list(map(str,input().split()))
+a=[]
+for i in range(len(l)):
     c=0
-    for j in i:
-        if j in v:
+    for j in l[i]:
+        if j in s:
             c+=1
-    print(c,end=" ")
+    a.append(c)
+print(*a)
