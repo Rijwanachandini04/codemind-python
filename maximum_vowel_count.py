@@ -1,12 +1,11 @@
-a=input()
-arr=list(a.split())
-v="aeiouAEIOU"
-m=0
-for i in arr:
+s="aeiouAEIOU"
+l=list(map(str,input().split()))
+max=0
+for i in range(len(l)):
     c=0
-    for j in i:
-        if j in v:
+    for j in l[i]:
+        if j in s:
             c+=1
-    if(m<c):
-        m=c
-print(m)
+    if c>max:
+        max=c
+print(max)
